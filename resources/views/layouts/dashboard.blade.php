@@ -5,7 +5,7 @@
   <title>@yield('title', 'Dashboard')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+   @vite(['resources/css/dashboard.css', 'resources/js/dashboard.js'])
 </head>
 <body>
   <!-- أضف هذا في مكان مناسب داخل الصفحة -->
@@ -15,6 +15,5 @@
   <div></div>
 </div>
   @yield('content')
-  <script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>

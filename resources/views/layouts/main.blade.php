@@ -8,13 +8,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- css -->
-     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    @vite(['resources/css/style.css', 'resources/css/login.css', 'resources/js/main.js'])
 </head>
 
 <body class="@yield('body-class', 'default-body')">
@@ -22,7 +20,6 @@
     @yield('content')
 
     <!-- js -->
-    <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 
